@@ -1,0 +1,53 @@
+.flex-box{
+    border: 2px solid black;
+    display: flex;
+    /* 안의 내용물들을 block이 아니라 flexitem으로  */
+
+    /* height: 100px; */
+    /*height를 설정안하면 자식 아이템의 가장 큰 Height값이 되는 거 같다*/
+    
+    /* gap: 10px; */
+
+    flex-wrap: wrap;
+    /* 자식 아이템이 왜곡되지 않게 부모 컨테이너가 조정됨 
+    기본적으로 nowrap*/
+
+    /* justify-content: space-evenly; */
+    /*
+    space-between: 요소들 사이에 같은 간격
+    space-around: 요소 주위에 같은 간격
+    space-evenly: 요소 주위가 똑같은 간격*/
+
+    /* align-items: flex-end; */
+    /* align-items가 안될 때는 자식 아이템의 height가 부모 컨테이너와 같아서 위 아래 공간이 없기 때문*/
+}
+
+.flex-box div{
+    border: 2px solid brown;
+    /* width: min-content; */
+    /* 블럭 컨텐츠가 최대한으로 줄여줄 수 있는 길이로 조정 
+    왜인지 한글은 한 글자까지 줄여지고 영어는 한 단어*/
+    /* height: fit-content; */
+    
+    flex-shrink: 1;
+    /* 부모 컨테이너에 남은 공간들을 활용해 자식 아이템들이 배치됨.
+    부모 컨테이너에 남은 자리가 없으면 기본적으로 자식 아이템들이 낑겨서 들어감
+    기본적으로 flex-shrink 1  */
+
+    /* flex-grow: 1; */
+    /* 부모 컨테이너의 남은 공간을 다 활용해 자식 아이템이 사용
+    값으로 비율을 조정할 수 있음 
+    기본적으로 flex-grow 0
+
+    주의: flex-grow 키면 justify-content가 작동 안할 수 있다
+    남은 공간이 없기 때문*/
+
+    /* flex:1 ; */
+    /* 자식 아이템들의 크기 비율 설정 */
+}
+
+
+
+.flex-box :nth-child(1){
+    align-self: flex-end;
+}
