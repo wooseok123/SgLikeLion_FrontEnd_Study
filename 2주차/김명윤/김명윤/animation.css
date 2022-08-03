@@ -1,0 +1,103 @@
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+
+    }
+}
+
+@keyframes wiggle2 {
+    0% {
+        transform: rotate(0deg);
+
+    }
+
+    50% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+
+    }
+}
+
+
+
+
+@keyframes yoon {
+    from {
+        left: -20%;
+        opacity: 0;
+    }
+
+    to {
+        left: 4%;
+        opacity: 1;
+    }
+
+}
+
+@keyframes back {
+    from {
+        left: 4%;
+        opacity: 1;
+    }
+
+    to {
+
+        left: -20%;
+        opacity: 0;
+    }
+}
+
+@keyframes up {
+    from {
+        top: 100%;
+        opacity: 0;
+
+    }
+
+    to {
+        top: 40%;
+        opacity: 1;
+
+    }
+
+}
+
+@keyframes down {
+    from {
+        top: 40%;
+        opacity: 1;
+
+    }
+
+    to {
+        top: 100%;
+        opacity: 0;
+
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
