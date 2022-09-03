@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //ex1.
+
+        console.log(`my name is ${name1}`)
+        var name1 = 'Tom'
+
+        //실제로는 호이스팅이 적용돼 이렇게 작동하는 거랑 같다
+        // var name1  //undefined
+        // console.log(`my name is ${name1}`)
+        // name1 = 'Tom'
+
+        // console.log(`my name is ${name2}`)
+        // let name2 = 'Jerry'
+
+        //let은 호이스팅이 적용되지 않아 name2를 선언하기 전에 console.log에서 name2를 쓰기 때문에 referenceError
+
+        //ex2.
+
+        printTom()
+        function printTom(){
+            console.log('my name is Tom')
+        }
+
+        //함수선언문 부분이 호이스팅 되어 최상단으로 올라가 실제로는 다음과 같이 작동한다
+        
+        // function printTom(){
+        //     console.log('my name is Tom')
+        // }
+        // printTom()
+
+        //ex3.
+
+        printName(Jerry)
+        function printName(firstname) { 
+            var result = inner(); 
+            console.log(typeof inner); 
+            console.log("name is " + result); 
+            function inner() { 
+                return "inner value";
+            }
+        }
+        
+
+        //
+        function printName(firstname) { 
+            var result; //undefined
+            function inner() { 
+                return "inner value";
+            }
+            result = inner();   //할당
+            console.log(typeof inner); 
+            console.log("name is " + result); 
+            
+        }
+        printName(Jerry)
+
+        function foo() {
+  for(var i=0; i<10; i++) {
+    console.log('i', i)
+  }
+}
+foo()
+console.log('after loop i is', i)
+
+    </script>
+</head>
+<body>
+    <h2>호이스팅</h2>
+    <p>
+        호이스팅이란, 선언된 식별자가 실제로는 해당 함수의 유효 범위의 최상단에서 선언되는 것.<br>
+
+        결국 JS에서 식별자의 선언(메모리에 할당)과 초기화(변수에 값을 넣음)는 같은 줄에 적혀 있더라도 실질적으로는 단계별로 진행된다. <br>
+
+        JS가 실행되기 전에 JS parser(컴파일러 같은 거)가 함수 안에서 선언된 식별자들을 모아서 해당 유효 범위의 최상단에 선언한다.<br>
+
+        JS 엔진이 함수선언문 해석 -> 변수 선언 -> 코드 실행 순서로 작동하기 때문에 코드가 실행될 때 이미 함수와 변수가 호이스팅 되어 있다 <br>
+
+        호이스팅은 var 변수와 함수선언문에서 일어난다. <br>
+
+        ex1. <br>
+        var과 let의 호이스팅 차이 <br>
+
+        ex2. <br>
+        함수선언문의 호이스팅 <br>
+
+        ex3. <br>
+        두 개 이상의 호이스팅<br>
+    </p>
+
+   
+</body>
+</html>
