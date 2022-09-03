@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myownAccordian</title>
+    <link rel="stylesheet" href="accordian.css">
+</head>
+<body>
+    <h2>아코디언 연습</h2>
 
+    <button class="accordian">아시아</button>
+    <div class ="pannel">
+        <p>중국</p>
+        <p>한국</p>
+        <p>일본</p>
+    </div>
+
+    <button class="accordian">유럽</button>
+    <div class ="pannel">
+        <p>영국</p>
+        <p>프랑스</p>
+        <p>독일</p>
+    </div>
+
+    <button class="accordian">남미</button>
+    <div class ="pannel">
+        <p>아르헨티나</p>
+        <p>브라질</p>
+        <p>우루과이</p>
+    </div>
+
+
+    <script src="accordian.js"></script>
+</body>
+</html>
